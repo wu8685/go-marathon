@@ -286,26 +286,26 @@ type EventDeploymentFailed struct {
 
 // EventDeploymentInfo describes a 'deployment_info' event.
 type EventDeploymentInfo struct {
-	EventType   string          `json:"eventType"`
-	CurrentStep *DeploymentStep `json:"currentStep"`
-	Timestamp   string          `json:"timestamp"`
-	Plan        *DeploymentPlan `json:"plan"`
+	EventType   string            `json:"eventType"`
+	CurrentStep *DeploymentStepV1 `json:"currentStep"`
+	Timestamp   string            `json:"timestamp"`
+	Plan        *DeploymentPlan   `json:"plan"`
 }
 
 // EventDeploymentStepSuccess describes a 'deployment_step_success' event.
 type EventDeploymentStepSuccess struct {
-	EventType   string          `json:"eventType"`
-	CurrentStep *DeploymentStep `json:"currentStep"`
-	Timestamp   string          `json:"timestamp"`
-	Plan        *DeploymentPlan `json:"plan"`
+	EventType   string            `json:"eventType"`
+	CurrentStep *DeploymentStepV1 `json:"currentStep"`
+	Timestamp   string            `json:"timestamp"`
+	Plan        *DeploymentPlan   `json:"plan"`
 }
 
 // EventDeploymentStepFailure describes a 'deployment_step_failure' event.
 type EventDeploymentStepFailure struct {
-	EventType   string          `json:"eventType"`
-	CurrentStep *DeploymentStep `json:"currentStep"`
-	Timestamp   string          `json:"timestamp"`
-	Plan        *DeploymentPlan `json:"plan"`
+	EventType   string            `json:"eventType"`
+	CurrentStep *DeploymentStepV1 `json:"currentStep"`
+	Timestamp   string            `json:"timestamp"`
+	Plan        *DeploymentPlan   `json:"plan"`
 }
 
 // GetEvent returns allocated empty event object which corresponds to provided event type
